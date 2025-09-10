@@ -87,11 +87,11 @@ public class Main {
 
 			int numberOfChars = timeQueue.size();
 
-			if (numberOfChars >= 6) {
-				shakeCount = 30;
+			if (numberOfChars >= 8) {
+				shakeCount = 40;
 			}
 
-			if (numberOfChars >= 8) {
+			if (numberOfChars >= 12) {
 				superLabel.setAlpha(1f);
 			} else {
 				superLabel.setAlpha(0f);
