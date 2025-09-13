@@ -8,4 +8,5 @@ This screen overlay app lets you have that monkey everywhere!
 
 ## Demo
 ![demo](demo.gif)
+![demo2](demo2.gif)
 
