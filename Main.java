@@ -7,7 +7,6 @@ import com.github.kwhat.jnativehook.NativeInputEvent;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Random;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -16,18 +15,18 @@ public class Main {
 	private static int shakeCount;
 	private static final int SHAKE_INTERVAL_MS = 10;
 	
-	static ImageIcon monkeyUpImage = new ImageIcon("m3.png");
-	static ImageIcon monkeyLeftImage = new ImageIcon("m1.png");
-	static ImageIcon monkeyRightImage = new ImageIcon("m2.png");
-	static ImageIcon monkeyBothImage = new ImageIcon("m4.png");
+	static ImageIcon monkeyUpImage;
+	static ImageIcon monkeyLeftImage;
+	static ImageIcon monkeyRightImage;
+	static ImageIcon monkeyBothImage;
 
-	static ImageIcon superUpImage = new ImageIcon("m3_fast.png");
-	static ImageIcon superLeftImage = new ImageIcon("m1_fast.png");
-	static ImageIcon superRightImage = new ImageIcon("m2_fast.png");
-	static ImageIcon superBothImage = new ImageIcon("m4_fast.png");
+	static ImageIcon superUpImage;
+	static ImageIcon superLeftImage;
+	static ImageIcon superRightImage;
+	static ImageIcon superBothImage;
 
-	static int iconHeight = monkeyUpImage.getIconHeight();
-	static int iconWidth = monkeyUpImage.getIconWidth();
+	static int iconHeight;
+	static int iconWidth;
 
 	static Queue<Long> timeQueue = new LinkedList<>();
 
@@ -35,6 +34,19 @@ public class Main {
 	static int offsetXIndex;
 
 	public static void main(String[] args) {
+		monkeyUpImage = new ImageIcon(Main.class.getResource("/images/m3.png"));
+		monkeyLeftImage = new ImageIcon(Main.class.getResource("/images/m1.png"));
+		monkeyRightImage = new ImageIcon(Main.class.getResource("/images/m2.png"));
+		monkeyBothImage = new ImageIcon(Main.class.getResource("/images/m4.png"));
+
+		superUpImage = new ImageIcon(Main.class.getResource("/images/m3_fast.png"));
+		superLeftImage = new ImageIcon(Main.class.getResource("/images/m1_fast.png"));
+		superRightImage = new ImageIcon(Main.class.getResource("/images/m2_fast.png"));
+		superBothImage = new ImageIcon(Main.class.getResource("/images/m4_fast.png"));
+
+		iconHeight = monkeyUpImage.getIconHeight();
+		iconWidth = monkeyUpImage.getIconWidth();
+
 		JFrame frame = new JFrame();
 		frame.setLayout(null);
 		frame.setUndecorated(true);
